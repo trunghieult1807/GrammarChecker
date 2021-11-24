@@ -36,6 +36,11 @@
 >>```pip install -r requirements.txt --no-cache-dir```
 
 **5. Run application**
+>Create model_files directory at GrammarCheckerBe/model/data/model_files
+
+>Download model file into that directory
+>>```curl -O https://grammarly-nlp-data-public.s3.amazonaws.com/gector/xlnet_0_gector.th```
+
 >For testing:
 >>Change the script in test.py and run ```python test.py```
 
