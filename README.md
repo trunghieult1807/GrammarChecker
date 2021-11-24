@@ -10,16 +10,19 @@
   
 # GrammarChecker Back End
 **1. Install Python 3.7.x and upgrade pip to 21.3.x**
->Install python 3.7\
->>Follow this article: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/\
->Upgrade pip\
->>```pip install --upgrade pip```\
+>Install python 3.7
+>>Follow this article: https://linuxize.com/post/how-to-install-python-3-7-on-ubuntu-18-04/
+
+>Upgrade pip
+>>```pip install --upgrade pip```
 
 **2. Install gcc**
 >If MacOs:
 >>```sudo brew install gcc```
+
 >If Linux:
 >>```sudo apt install gcc```
+
 >If CentOs:
 >>```yum install -y gcc-c++```
 
@@ -34,5 +37,6 @@
 **5. Run application**
 >For testing:
 >>Change the script in test.py and run ```python test.py```
+
 >For API:
 >>```python flask_api.py```
