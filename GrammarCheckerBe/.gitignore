@@ -1,0 +1,6 @@
+venv/
+model/data/model_files/xlnet_0_gector.th
+model/data/model_files/bert_tokenizer
+model/data/model_files/model
+.aws-sam/
+samconfig.toml

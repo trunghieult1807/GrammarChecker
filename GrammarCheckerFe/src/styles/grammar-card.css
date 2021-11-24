@@ -1,0 +1,82 @@
+.card-container {
+  width: 300px;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 0 12px 10px 0 rgba(23, 43, 77, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  border: 0;
+  outline: 0;
+  padding: 1rem;
+}
+
+.card-container:hover {
+    box-shadow: 0px 15px 25px -5px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+};
+
+.card-container:active {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+};
+
+.card-content {
+  flex-direction: column;
+  width: 100%;
+}
+
+.card-title {
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 19px;
+  margin-bottom: 12px;
+  font-family: Fenix;
+  display: flex;
+  align-items: center;
+}
+
+.card-body {
+    display: flex; 
+    justify-content: space-start;
+}
+
+
+.error-phrase {
+    color: red;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.correct-phrase {
+    color: green;
+    margin-left: 10px;
+}
+
+.remove-icon {
+    margin-left: auto;
+    margin-right: 0;
+    size: 10rem;
+}
+
+.dot {
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.3rem;
+}
+
+.dot-grammar {
+    background-color: red;
+}
+
+.dot-spell {
+    background-color: orange;
+}

@@ -1,0 +1,28 @@
+jsonnet
+-f https://download.pytorch.org/whl/torch_stable.html
+torch==1.3.0
+overrides==3.1.0
+flask==1.1.2
+flask-restful
+allennlp==0.8.4
+python-Levenshtein==0.12.0
+transformers==2.2.2
+scikit-learn==0.22.2
+sentencepiece==0.1.91
+spacy==2.1.9
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.1.0/en_core_web_sm-2.1.0.tar.gz#egg=en_core_web_sm
+waitress==1.4.4
+Flask-Cors
+
+
+# if torch doesn't install, execute separately :
+# pip install torch==1.3.0
+#
+# if installation fails for other reason, you may try:
+#
+# sudo apt install gcc
+# conda install -c conda-forge jsonnet
+
+
+# during development, you will need:
+# libsass==0.20.1

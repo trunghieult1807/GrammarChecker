@@ -1,0 +1,67 @@
+.App {
+    background: #C2E2A2;
+}
+  
+.wrapper {
+    margin: auto;
+    width: 100%;
+}
+
+.editor-wrapper {
+    width: 70%;
+    background: #FFF;
+    border-radius: 5px;
+    box-shadow: 1px 7px 15px rgba(0, 0, 0, .075);
+    padding: 10px 20px;
+    min-width: 800px;
+    max-width: 800px;
+    min-height: 300px;
+    max-height: 600px;
+    position: relative;
+}
+
+.format-toolbar {
+    display: flex;
+    border-bottom: solid 1.7px rgba(199, 198, 255, 0.15);
+    padding: 10px 0;
+    margin: 0 0 10px 0;
+}
+
+.tooltip-icon-button {
+    cursor: pointer;
+    border: 0;
+    outline: none;
+}
+
+blockquote {
+    border-left: 2px solid #e2e2e2;
+    color: #a9a9a9;
+    font-style: italic;
+    margin-left: 0;
+    padding-left: 1rem;
+}
+
+code {
+    background: #eee;
+    font-size: 0.8rem;
+}
+
+.button {
+    background-color: #008cba;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+  
+.button:disabled {
+opacity: 0.5;
+}
