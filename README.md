@@ -3,7 +3,7 @@
 # GrammarChecker Front End
 
 **1. Install package**
->```yarn install```
+>```yarn install```\
 **2. Start application**
 >```yarn start```
   
