@@ -31,6 +31,7 @@
 
 **4. Install requirement**
 >```pip install -r requirements.txt```
+
 >If run on low memory machine:
 >>```pip install -r requirements.txt --no-cache-dir```
 
