@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask_restful import Resource, Api, reqparse
 from flask_cors import CORS
-from predictor import *
+from inferrence import *
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"*": {"origins": "*"}})
@@ -11,7 +11,7 @@ api = Api(app)
 class GrammarChecker(Resource):
     def post(self):
         req = request.json
-        return predict(req['body'])
+        return grammar_checker(req['body'])
 
 
 api.add_resource(GrammarChecker, '/grammar_checker')

@@ -21,7 +21,7 @@ model = model.load_model(
 )
 
 
-def predict(input_text):
+def grammar_checker(input_text):
     """Predicts a correction for an input text and returns the tagged input and output."""
     input_text = unidecode(input_text)
     tokenized_sentences = tokenize_and_segment(input_text)
