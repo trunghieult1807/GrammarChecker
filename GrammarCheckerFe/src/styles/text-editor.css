@@ -8,16 +8,29 @@
 }
 
 .editor-wrapper {
-    width: 70%;
+    width: 50%;
     background: #FFF;
     border-radius: 5px;
-    box-shadow: 1px 7px 15px rgba(0, 0, 0, .075);
-    padding: 10px 20px;
-    min-width: 800px;
-    max-width: 800px;
-    min-height: 300px;
+    padding: 20px 20px;
+    min-width: 700px;
+    max-width: 700px;
+    min-height: 500px;
     max-height: 600px;
     position: relative;
+    font: 400 18px/28px "Prumo Deck",serif;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.editor {
+    font: 400 18px/28px "Prumo Deck",serif;
+    letter-spacing: 0;
+    background: transparent;
+    min-width: 760px;
+    max-width: 760px;
+    min-height: 400px;
+    max-height: 600px;
+    outline: none; 
+    border: none; 
+    resize: none;
 }
 
 .format-toolbar {
@@ -60,8 +73,58 @@ code {
     position: absolute;
     bottom: 10px;
     right: 10px;
+    z-index: 100;
 }
   
 .button:disabled {
 opacity: 0.5;
+}
+
+
+.delta-input-replace {
+  border-radius: 5px;
+  padding: 2px 0px;
+  background-color: #88E0EF;
+}
+
+.delta-input-delete {
+  border-radius: 5px;
+  padding: 2px 1px;
+  background-color: #FFADAD;
+}
+
+.delta-insert {
+  border-radius: 5px;
+  padding: 2px 1px;
+  background-color: #C2FFD9;
+}
+
+.delta-replace {
+  border-radius: 5px;
+  padding: 2px 0px;
+  background-color: #FDA65D;
+}
+
+.delta-delete {
+  border-radius: 5px;
+  padding: 2px 0px;
+  background-color: #FE8F8F;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+  min-height: 400px;
+  max-height: 520px;
+}
+
+div {
+  white-space: pre-wrap;
+}
+
+div:empty::before {
+  color: grey;
+}
+
+div[data-placeholder]:not([data-placeholder=""]):empty::before {
+  content: attr(data-placeholder);
 }

@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import {
@@ -10,6 +10,8 @@ import WaveBorder from "components/text-editor/WaveBorder";
 import { TextEditor } from 'components/text-editor/TextEditor';
 import { GrammarCard } from 'components/grammar-card/GrammarCard';
 import 'styles/text-editor.css';
+import { Output } from "components/text-editor/Output";
+import { HiArrowNarrowRight } from "react-icons/hi";
 
 const styles = (theme) => ({
   extraLargeButtonLabel: {
@@ -95,6 +97,10 @@ const styles = (theme) => ({
 });
 const GrammarCheckerSection = props => {
   const { classes, theme } = props;
+  const [value, setValue] = useState('');
+  const passValue = (newValue) => {
+    setValue(newValue);
+  }
   return (
     <Fragment >
       <div className={classNames("lg-p-top", classes.wrapper)} >
@@ -105,9 +111,9 @@ const GrammarCheckerSection = props => {
             <div>
               <div className='background' >
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                  <TextEditor />
-                  <div style={{ width: "120px" }}></div>
-                  <GrammarCard />
+                  <TextEditor passValue={passValue} />
+                  {value == '' ? <div></div> : <HiArrowNarrowRight color="#ffffff" size={70} style={{ margin: "auto 20px " }} />}
+                  {value == '' ? <div></div> : <Output value={value} />}
                 </div>
               </div>
             </div>

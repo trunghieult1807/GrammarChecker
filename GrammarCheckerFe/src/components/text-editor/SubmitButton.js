@@ -1,29 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-export const SubmitButton = ({input}) => {
-  const [loading, setLoading] = useState(false)
-  
-  const handle_input = () => {
-    let text = '';
-    for (let obj of input) {
-      for (let child of obj['children']) {
-        text = text.concat(child['text']);
-      }
-      text = text.concat(' ');
-    }
-    return text;
-  }
+export const SubmitButton = ({ setValueHandler, onClick, pass }) => {
+  const [loading, setLoading] = useState(false);
 
   const grammar_check = async () => {
+    let output = [];
     const url = 'http://localhost:8000/grammar_checker';
+    var raw = onClick();
+    var input = raw.replace(/<(.*?)>?/gm, '');
     const params = {
-      body: handle_input(),
+      body: input,
     }
     setLoading(true);
     await axios.post(url, params).then((res) => {
-      console.log(res.data);
-    })
+      output = res;
+      console.log(res);
+    });
+
+    pass(output['data']['tagged_output'])
+    setValueHandler(output['data']['tagged_input']);
     setLoading(false);
   };
   return (
@@ -40,5 +36,4 @@ export const SubmitButton = ({input}) => {
       </button>
     </div>
   );
-
 }

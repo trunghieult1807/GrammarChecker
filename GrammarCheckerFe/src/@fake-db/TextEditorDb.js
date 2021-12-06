@@ -5,18 +5,18 @@ export const initialValue = [
       { text: '' }
     ]
 
-  }
-  // {
-  //   type: 'paragraph',
-  //   children: [
-  //     { text: 'This is a ' },
-  //     { text: 'Gammar errors identification engine, ', bold: true },
-  //     { text: 'much', italic: true },
-  //     { text: ' better than ' },
-  //     { text: '<Grammarly>', code: true },
-  //     { text: '!' },
-  //   ],
-  // },
+  },
+  {
+    type: 'paragraph highlight',
+    children: [
+      { text: 'This is a ' },
+      { text: 'Gammar errors identification engine, ', bold: true },
+      { text: 'much', italic: true },
+      { text: ' better than ' },
+      { text: '<Grammarly>', code: true },
+      { text: '!' },
+    ],
+  },
   // {
   //   type: 'paragraph',
   //   children: [
