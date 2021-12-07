@@ -141,16 +141,15 @@ def highlight_changes_output(target_text):
 def add_css_tag(token, modification):
     """Returns a token wrapped with the corresponding css tag."""
     if modification == 'replace':
-        token = '<span class=\"delta-replace\">' + token + '</span>'
+        token = '<span class=\"delta-replace\">' + token + '<div class=\"show-me\"></div>' + '</span>'
     elif modification == 'delete':
-        token = '<span class=\"delta-delete\">' + token + '</span>'
+        token = '<span class=\"delta-delete\">' + token + '<div class=\"show-me\"></div>' + '</span>'
     elif modification == 'append':
-        token = '<span class=\"delta-insert\">' + token + '</span>'
+        token = '<span class=\"delta-insert\">' + token + '<div class=\"show-me\"></div>' + '</span>'
     elif modification == 'punctuation':
-        token = token[:-1] + '<span class=\"delta-insert\">' + token[-1] + '</span>'
+        token = token[:-1] + '<span class=\"delta-insert\">' + token[-1] + '<div class=\"show-me\"></div>' + '</span>'
     elif modification == 'input_delete':
-        token = '<span class=\"delta-input-delete\">' + token + '</span>'
+        token = '<span class=\"delta-input-delete\">' + token + '<div class=\"show-me\"></div>' + '</span>'
     elif modification == 'input_replace':
-        token = '<span class=\"delta-input-replace\">' + token + '</span>'
+        token = '<span class=\"delta-input-replace\">' + token + '<div class=\"show-me\"></div>' + '</span>'
     return token
-

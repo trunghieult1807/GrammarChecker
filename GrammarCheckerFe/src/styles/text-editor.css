@@ -128,3 +128,59 @@ div:empty::before {
 div[data-placeholder]:not([data-placeholder=""]):empty::before {
   content: attr(data-placeholder);
 }
+
+.show-me {
+  display: none;
+  position: fixed;
+  margin-top: 30px;
+  margin-left: -100px;
+  padding: 11px 11px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  border-radius: 10%;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.delta-input-replace:hover .show-me:before {                                                                                                                  
+  content: "This word is grammarly incorrect. Fix it!";                                                                                                                    
+}           
+
+.delta-input-delete:hover .show-me:before {                                                                                                                  
+  content: "Delete this word!";                                                                                                                    
+}     
+
+.delta-insert:hover .show-me:before {                                                                                                                  
+  content: "You miss this!";                                                                                                                    
+}     
+
+.delta-replace:hover .show-me:before {                                                                                                                  
+  content: "Change to this to correct!";                                                                                                                    
+}     
+
+.delta-delete:hover .show-me:before {                                                                                                                  
+  content: "Delete this word!";                                                                                                                    
+}     
+
+
+.delta-input-replace:hover .show-me {
+  display: inline-block;
+}
+
+.delta-input-delete:hover .show-me {
+  display: inline-block;
+}
+
+.delta-insert:hover .show-me {
+  display: inline-block;
+}
+.delta-replace:hover .show-me {
+  display: inline-block;
+}
+.delta-delete:hover .show-me {
+  display: inline-block;
+}

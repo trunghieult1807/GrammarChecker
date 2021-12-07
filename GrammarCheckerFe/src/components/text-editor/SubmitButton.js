@@ -8,7 +8,11 @@ export const SubmitButton = ({ setValueHandler, onClick, pass }) => {
     let output = [];
     const url = 'http://localhost:8000/grammar_checker';
     var raw = onClick();
-    var input = raw.replace(/<(.*?)>?/gm, '');
+    console.log('raw', raw);
+    var input = raw.replace(/<div>(.*?)div>?/gm, '');
+    console.log('input', input);
+    input = input.replace(/<(.*?)>?/gm, '');
+    
     const params = {
       body: input,
     }
@@ -20,6 +24,7 @@ export const SubmitButton = ({ setValueHandler, onClick, pass }) => {
 
     pass(output['data']['tagged_output'])
     setValueHandler(output['data']['tagged_input']);
+    console.log('out', output['data']['tagged_input']);
     setLoading(false);
   };
   return (
